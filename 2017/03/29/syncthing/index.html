@@ -85,11 +85,11 @@
 <meta name="description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你可揣测其不可持续。如此，一种无法去中心化的本地文档同步和管理解决方案，是妥协下的好方案。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有关文档同步兼谈版本管理">
-<meta property="og:url" content="http://chaoran.space/2017/03/29/syncthing/index.html">
+<meta property="og:url" content="http://hyranx.github.io/2017/03/29/syncthing/index.html">
 <meta property="og:site_name" content="比大更大">
 <meta property="og:description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你可揣测其不可持续。如此，一种无法去中心化的本地文档同步和管理解决方案，是妥协下的好方案。">
 <meta property="og:image" content="http://hyranx.github.io/images/1490756727137.png">
-<meta property="og:updated_time" content="2017-03-29T03:11:30.737Z">
+<meta property="og:updated_time" content="2017-03-29T03:15:32.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关文档同步兼谈版本管理">
 <meta name="twitter:description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你可揣测其不可持续。如此，一种无法去中心化的本地文档同步和管理解决方案，是妥协下的好方案。">
@@ -307,18 +307,19 @@
       
 
       
-        <p><strong>摘要</strong>：早在 360 网盘崩溃之前，清醒如我则你可揣测其不可持续。如此，一种无法去中心化的本地文档同步和管理解决方案，是妥协下的好方案。<br><a id="more"></a><br>如果你没被<strong>摘要</strong>中恶意绕弯的表达搞得兴致全无，那么你即将可以愉快的阅读。你看，竟然押起韵了。<br>网盘对于</p>
-<h1 id="为什么需要「本地全同」-「版本管理」"><a href="#为什么需要「本地全同」-「版本管理」" class="headerlink" title="为什么需要「本地全同」+「版本管理」"></a>为什么需要「本地全同」+「版本管理」</h1><p>网盘有些问题：</p>
+        <p><strong>摘要</strong>：早在 360 网盘崩溃之前，清醒如我则你可揣测其不可持续。如此，一种无法去中心化的本地文档同步和管理解决方案，是妥协下的好方案。<br><a id="more"></a></p>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>如果你没被<strong>摘要</strong>中恶意绕弯的表达搞得兴致全无，那么你即将可以愉快的阅读。你看，竟然押起韵了。</p>
+<h1 id="为什么需要「本地全同」-「版本管理」"><a href="#为什么需要「本地全同」-「版本管理」" class="headerlink" title="为什么需要「本地全同」+「版本管理」"></a>为什么需要「本地全同」+「版本管理」</h1><p><strong>网盘有些问题：</strong></p>
 <ol>
 <li>网盘那种「只上传增加网盘内容，永不下载修改本地内容。」的策略，毫无疑问是安全但冗余的。当你试图在网盘中寻找一个在本地频繁修改的文件夹内容是，你一定会手足无……好吧，一定会懵逼。</li>
 <li>网盘那种「保持本地与网盘完全一样」的策略，毫无疑问是清晰但危险的。好的同步策略，可以让危险程度将的足够低，但目前国内网盘的同步策略都不怎样。另外，网盘也无法提供能满足你需要的大容量的同时，保证价格可被接受。</li>
 </ol>
-<p>是可以被本地解决的：</p>
+<p><strong>是可以被本地解决的：</strong></p>
 <ol>
 <li>本地存储不担心容量问题。</li>
 <li>现在你只需要找到一个「全同」策略最好的软件就可以了。</li>
 </ol>
-<p>地震怎么办：</p>
+<p><strong>地震怎么办：</strong></p>
 <ol>
 <li>宿舍的树莓派和办公室的电脑同时被毁掉，坐在废墟上的你，陷入深深忧虑。</li>
 <li>只要用网盘作为补充，一个混乱冗余但不丢失任何文件的网盘系统，已经可以足够胜任抚慰你情绪。</li>
@@ -343,7 +344,7 @@
 </li>
 </ol>
 <p>因此选百度。捏着鼻子为了资料安全，忍痛使用百度，也是十分感人。</p>
-<h1 id="「本地全同」的选择"><a href="#「本地全同」的选择" class="headerlink" title="「本地全同」的选择"></a>「本地全同」的选择</h1><p>首推 Syncthing ，它的使用效果是：</p>
+<h1 id="「本地全同」的选择"><a href="#「本地全同」的选择" class="headerlink" title="「本地全同」的选择"></a>「本地全同」的选择</h1><p><strong>首推 Syncthing ，它的使用效果是：</strong></p>
 <ol>
 <li>我在家用手机修改文档 A</li>
 <li>文档被自动备份到永远在线的位于宿舍的树莓派上</li>
@@ -412,7 +413,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/29/syncthing/"
-           data-title="有关文档同步兼谈版本管理" data-url="http://chaoran.space/2017/03/29/syncthing/">
+           data-title="有关文档同步兼谈版本管理" data-url="http://hyranx.github.io/2017/03/29/syncthing/">
       </div>
     
   </div>
@@ -496,7 +497,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么需要「本地全同」-「版本管理」"><span class="nav-number">1.</span> <span class="nav-text">为什么需要「本地全同」+「版本管理」</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网盘的选择"><span class="nav-number">2.</span> <span class="nav-text">网盘的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#「本地全同」的选择"><span class="nav-number">3.</span> <span class="nav-text">「本地全同」的选择</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么需要「本地全同」-「版本管理」"><span class="nav-number">2.</span> <span class="nav-text">为什么需要「本地全同」+「版本管理」</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网盘的选择"><span class="nav-number">3.</span> <span class="nav-text">网盘的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#「本地全同」的选择"><span class="nav-number">4.</span> <span class="nav-text">「本地全同」的选择</span></a></li></ol></div>
             
           </div>
         </section>
