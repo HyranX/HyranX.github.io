@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="比大更大">
 <meta property="og:description" content="摘要： 花四个小时解决一辈子画地图的问题。">
 <meta property="og:image" content="http://hyranx.github.io/images/1491791937516.png">
-<meta property="og:updated_time" content="2017-04-10T03:03:48.907Z">
+<meta property="og:updated_time" content="2017-04-10T03:30:19.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用R绘制中国分省热度图">
 <meta name="twitter:description" content="摘要： 花四个小时解决一辈子画地图的问题。">
@@ -327,7 +327,18 @@
 
       
         <p><strong>摘要：</strong> 花四个小时解决一辈子画地图的问题。<br><a id="more"></a></p>
-<h1 id="起止"><a href="#起止" class="headerlink" title="起止"></a>起止</h1><p>去年8月同办公室主任及当时尚未失恋的吴师弟，连蒙带骗，蹭听清华大数据讲习班课程，那时知道 R 绘制地图的功能，但直到今天才因论文写作需要，沉下心来琢磨。孟天广老师提供的代码完全看不懂，也不是一两天。Brian Dennis 关于 R 的初学者教材也只翻看了 20 页。看来，毫无基础的初学者，只能换一种方法，靠我素养，边想边学，东拼西凑，够用就好。以下内容几乎参考自四篇文章，文后有链接地址，我亲自修改的部分十指可数，其中困扰我的地方已经添加注释，复制粘贴之前，你可以先谢我。</p>
+<h1 id="起止"><a href="#起止" class="headerlink" title="起止"></a>起止</h1><ul>
+<li>去年8月同办公室李主任及当时尚未失恋的吴师弟，连蒙带骗，蹭听清华大数据讲习班课程，那时知道 R 绘制地图的功能，但直到今天才因论文写作需要，沉下心来琢磨。</li>
+<li>但：<blockquote>
+<ul>
+<li>孟天广老师提供的代码完全看不懂，这也不是一两天；</li>
+<li>Brian Dennis 关于 R 的初学者教材也只翻看了 20 页；</li>
+<li>侯博士提供了详细的使用 Stata 绘制地图的代码和视频教程，但道听途说中 R 已成为未来计量、绘图方向，已经会的计量方法迁移到 R 上实无必要，新功能如果仍要接续 Stata 的老种，无法接受。</li>
+</ul>
+</blockquote>
+</li>
+<li>看来，毫无基础的初学者，只能换一种方法，靠我素养，边想边学，东拼西凑，够用就好。以下内容参考自四篇文章，文后有链接地址，我亲加入自动添加图例并导出高分辨率 PNG 功能，大量作图时十分方便。其中困扰我的地方已经添加注释，复制粘贴之前，可以先谢我。</li>
+</ul>
 <h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><pre><code>gpclibPermit() #要允许这个才能用
 library(maptools); #使用这个工具
 x=readShapePoly(&apos;bou2_4p.shp&apos;) # 读入中国地形
