@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Scholar," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="比大更大">
 <meta property="og:description" content="摘要： 花四个小时解决一辈子画地图的问题。">
 <meta property="og:image" content="http://hyranx.github.io/images/1491791937516.png">
-<meta property="og:updated_time" content="2017-04-10T02:48:50.510Z">
+<meta property="og:updated_time" content="2017-04-10T03:03:48.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用R绘制中国分省热度图">
 <meta name="twitter:description" content="摘要： 花四个小时解决一辈子画地图的问题。">
@@ -278,6 +278,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Scholar/" itemprop="url" rel="index">
+                    <span itemprop="name">Scholar</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -308,7 +327,7 @@
 
       
         <p><strong>摘要：</strong> 花四个小时解决一辈子画地图的问题。<br><a id="more"></a></p>
-<h1 id="起止"><a href="#起止" class="headerlink" title="起止"></a>起止</h1><p> 2016-08-24 从蹭清华大数据讲习班课程的时候知道这个方法，但直到今天才因论文写作需要，沉下心来琢磨。孟天广老师提供的代码完全看不懂，不会用。Brian Dennis 关于 R 的初学者教材也只翻看了 20 页。看来，毫无基础的初学者，只能换一种方法，用友好的方式，边想边学，东拼西凑，够用就好。</p>
+<h1 id="起止"><a href="#起止" class="headerlink" title="起止"></a>起止</h1><p>去年8月同办公室主任及当时尚未失恋的吴师弟，连蒙带骗，蹭听清华大数据讲习班课程，那时知道 R 绘制地图的功能，但直到今天才因论文写作需要，沉下心来琢磨。孟天广老师提供的代码完全看不懂，也不是一两天。Brian Dennis 关于 R 的初学者教材也只翻看了 20 页。看来，毫无基础的初学者，只能换一种方法，靠我素养，边想边学，东拼西凑，够用就好。以下内容几乎参考自四篇文章，文后有链接地址，我亲自修改的部分十指可数，其中困扰我的地方已经添加注释，复制粘贴之前，你可以先谢我。</p>
 <h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><pre><code>gpclibPermit() #要允许这个才能用
 library(maptools); #使用这个工具
 x=readShapePoly(&apos;bou2_4p.shp&apos;) # 读入中国地形
@@ -387,7 +406,13 @@ legend(&quot;right&quot;,inset=0.2, title=&quot;效率值&quot;,
        fill=c(rgb(0,0,0,maxColorValue = 255),rgb(50,50,50,maxColorValue = 255),rgb(100,100,100,maxColorValue = 255),rgb(150,150,150,maxColorValue = 255),rgb(200,200,200,maxColorValue = 255),rgb(255,255,255,maxColorValue = 255)), 
        horiz=FALSE)
 dev.off()
-</code></pre><h1 id="看起来是这样"><a href="#看起来是这样" class="headerlink" title="看起来是这样"></a>看起来是这样</h1><p><img src="http://hyranx.github.io/images/1491791937516.png" alt="image"></p>
+</code></pre><h1 id="这样式的"><a href="#这样式的" class="headerlink" title="这样式的"></a>这样式的</h1><p><img src="http://hyranx.github.io/images/1491791937516.png" alt="image"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.qiubio.com:8080/archives/2477" target="_blank" rel="external">http://blog.qiubio.com:8080/archives/2477</a></li>
+<li><a href="https://cos.name/2013/01/drawing-map-in-r-era/" target="_blank" rel="external">https://cos.name/2013/01/drawing-map-in-r-era/</a></li>
+<li><a href="https://cos.name/2009/07/drawing-china-map-using-r/" target="_blank" rel="external">https://cos.name/2009/07/drawing-china-map-using-r/</a></li>
+<li><a href="http://bbs.pinggu.org/thread-3786862-1-1.html" target="_blank" rel="external">http://bbs.pinggu.org/thread-3786862-1-1.html</a></li>
+</ol>
 
       
     </div>
@@ -406,12 +431,6 @@ dev.off()
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Scholar/" rel="tag">#Scholar</a>
-          
-        </div>
       
 
       
@@ -504,7 +523,7 @@ dev.off()
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -542,7 +561,7 @@ dev.off()
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起止"><span class="nav-number">1.</span> <span class="nav-text">起止</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#看起来是这样"><span class="nav-number">3.</span> <span class="nav-text">看起来是这样</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起止"><span class="nav-number">1.</span> <span class="nav-text">起止</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这样式的"><span class="nav-number">3.</span> <span class="nav-text">这样式的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
