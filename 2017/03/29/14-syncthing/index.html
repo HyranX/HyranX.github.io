@@ -82,16 +82,18 @@
 
 
 
-<meta name="description" content="摘要：用AHK一键搞定一个你每天都需要花费很多时间做很多遍的事情">
+<meta name="description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你也可揣测其不可持续。如此，一种即使无法去中心化的本地文档同步和管理解决方案，竟也成为妥协下的好方案。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用AutoHotKey进行快捷搜索">
-<meta property="og:url" content="http://hyranx.github.io/2016/04/12/2_quick_search_using_ahk/index.html">
+<meta property="og:title" content="有关文档同步兼谈版本管理">
+<meta property="og:url" content="http://hyranx.github.io/2017/03/29/14-syncthing/index.html">
 <meta property="og:site_name" content="比大更大">
-<meta property="og:description" content="摘要：用AHK一键搞定一个你每天都需要花费很多时间做很多遍的事情">
-<meta property="og:updated_time" content="2016-05-18T11:29:56.000Z">
+<meta property="og:description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你也可揣测其不可持续。如此，一种即使无法去中心化的本地文档同步和管理解决方案，竟也成为妥协下的好方案。">
+<meta property="og:image" content="http://hyranx.github.io/images/1490756727137.png">
+<meta property="og:updated_time" content="2017-04-10T08:13:15.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用AutoHotKey进行快捷搜索">
-<meta name="twitter:description" content="摘要：用AHK一键搞定一个你每天都需要花费很多时间做很多遍的事情">
+<meta name="twitter:title" content="有关文档同步兼谈版本管理">
+<meta name="twitter:description" content="摘要：早在 360 网盘崩溃之前，清醒如我则你也可揣测其不可持续。如此，一种即使无法去中心化的本地文档同步和管理解决方案，竟也成为妥协下的好方案。">
+<meta name="twitter:image" content="http://hyranx.github.io/images/1490756727137.png">
 
 
 
@@ -109,7 +111,7 @@
   };
 </script>
 
-  <title> 使用AutoHotKey进行快捷搜索 | 比大更大 </title>
+  <title> 有关文档同步兼谈版本管理 | 比大更大 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +260,7 @@
             
             
               
-                使用AutoHotKey进行快捷搜索
+                有关文档同步兼谈版本管理
               
             
           </h1>
@@ -270,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-12T16:49:46+08:00" content="2016-04-12">
-              2016-04-12
+            <time itemprop="dateCreated" datetime="2017-03-29T10:41:27+08:00" content="2017-03-29">
+              2017-03-29
             </time>
           </span>
 
@@ -284,8 +286,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Computer/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer</span>
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
                   </a>
                 </span>
 
@@ -300,8 +302,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/12/2_quick_search_using_ahk/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/12/2_quick_search_using_ahk/" itemprop="commentsCount"></span>
+                <a href="/2017/03/29/14-syncthing/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/29/14-syncthing/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,111 +326,70 @@
       
 
       
-        <p><strong>摘要：</strong>用AHK一键搞定一个你每天都需要花费很多时间做很多遍的事情<br><a id="more"></a></p>
-<h1 id="一个诉求"><a href="#一个诉求" class="headerlink" title="一个诉求"></a>一个诉求</h1><p>在任意程序中，快速用指定的搜索引擎搜索选中的文字。</p>
-<h1 id="传统做法"><a href="#传统做法" class="headerlink" title="传统做法"></a>传统做法</h1><p>这一操作是在使用电脑过程中操作频率很大，通常较快的方法也只能：</p>
-<pre><code>1. 先复制
-2. Chrome地址栏中用「搜索引擎关键字」+空格+「粘贴」+「回车」
-</code></pre><p>去实现，这对于常用搜索引擎或想同时在多个网站执行搜索来说，还是太慢了。</p>
-<h1 id="而AHK这个上古神器能够做到的"><a href="#而AHK这个上古神器能够做到的" class="headerlink" title="而AHK这个上古神器能够做到的"></a>而AHK这个上古神器能够做到的</h1><p>它能够轻松实现这样的功能：</p>
+        <p><strong>摘要</strong>：早在 360 网盘崩溃之前，清醒如我则你也可揣测其不可持续。如此，一种即使无法去中心化的本地文档同步和管理解决方案，竟也成为妥协下的好方案。<br><a id="more"></a></p>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>如果你没被 <strong>摘要</strong> 中恶意绕弯的表达搞得兴致全无，那么你即将可以愉快阅读。你看，押起韵了不是！</p>
+<h1 id="为什么需要「本地全同」-「版本管理」"><a href="#为什么需要「本地全同」-「版本管理」" class="headerlink" title="为什么需要「本地全同」+「版本管理」"></a>为什么需要「本地全同」+「版本管理」</h1><p><strong>网盘有些问题：</strong></p>
 <ol>
-<li>我把「执行搜索」的快捷键前缀设置为Alt + Shift + Ctrl（复杂全局快捷键可以避免冲突）</li>
-<li>这几个按键加上其他字母就可以搜索设定好的搜索引擎，以CNKI为例，具体实现过程如下：<pre><code>^!+c::
-end ^c
-run, http://search.cnki.net/kns/brief/Default_Result.aspx?code=SCDB&amp;kw=%clipboard%&amp;korder=0&amp;sel=1
-return
-</code></pre>以上四行功能分别是：</li>
+<li>网盘那种「只上传增加网盘内容，永不下载修改本地内容。」的策略，毫无疑问是安全但冗余的。当你试图在网盘中寻找一个在本地遭频繁修改的文件夹内容时，你一定会手足无……好吧，一定会懵逼。</li>
+<li>网盘那种「保持本地与网盘完全一样」的策略，毫无疑问是清晰但危险的。好的同步策略，可以让危险程度降得足够低，可惜但目前国内网盘的同步策略都不怎样。另外，在存储产业出现天翻地覆的重大变革之前，网盘也无法提供能同时：「满足你需要的大容量」、「会员价格可被你接受」以及「愿意付费的用户多到让供应商有利可图」。</li>
 </ol>
-<ul>
-<li>识别快捷键（^!+这三个东西代表了三个快捷键前缀）</li>
-<li>向当前程序发送「Ctrl + C」以复制</li>
-<li>打开包含剪贴板信息的网址</li>
-<li>结束</li>
-</ul>
-<p>看似复杂的过程就这样简单的完成了。</p>
-<h1 id="万万不能滥用剪贴板"><a href="#万万不能滥用剪贴板" class="headerlink" title="万万不能滥用剪贴板"></a>万万不能滥用剪贴板</h1><p>过程中使用了粘贴板作为字符串传递媒介，会替换原有粘贴板内容。如果有人恰好刚刚复制了阅后即焚的，能够阻止地球爆炸的核弹密码……为了避免这种惨剧发生，可以先将原始粘贴板内容暂存起来，功能执行后再替换回去就好。</p>
-<pre><code>1-2行之间加入
-f = %clipboard%
-3-4行之间加入
-clipboard = %f%
-大功告成
-</code></pre><h1 id="不值一提的变化"><a href="#不值一提的变化" class="headerlink" title="不值一提的变化"></a>不值一提的变化</h1><ol>
-<li>可以同时执行多个搜索引擎：一键搜索淘宝、京东、什么值得买……</li>
-<li>搜索「空格」+「site:pan.baidu.com」时，空格在URL里被替换为「+」，注意在AHK语句中，加号前要加转义字符「`」</li>
+<p><strong>问题可以被本地部分解决的：</strong></p>
+<ol>
+<li>本地存储不担心容量问题。</li>
+<li>现在你只需要找到一个「全同」策略最好的软件就可以了。</li>
 </ol>
-<h1 id="小例枚举："><a href="#小例枚举：" class="headerlink" title="小例枚举："></a>小例枚举：</h1><p>[##CNKI]</p>
-<pre><code>^!+c::
-f = %clipboard%
-Send ^c
-run, http://search.cnki.net/kns/brief/Default_Result.aspx?code=SCDB&amp;kw=%clipboard%&amp;korder=0&amp;sel=1
-clipboard = %f%
-return
-</code></pre><p>[##豆瓣音乐 D]</p>
-<pre><code>^!+d::
-f = %clipboard%
-Send +^c
-run, http://music.douban.com/subject_search?search_text=%clipboard%&amp;cat=1003
-clipboard = %f%
-return
-</code></pre><p>[##谷歌 G]</p>
-<pre><code>^!+g::
-f = %clipboard%
-Send ^c
-run, https://www.google.com/search?sclient=psy-ab&amp;newwindow=1&amp;site=&amp;source=hp&amp;btnG=Search&amp;q=%clipboard%&amp;oq=&amp;gs_l=&amp;pbx=1
-clipboard = %f%
-return
-</code></pre><p>[##谷歌 专利搜索 w]</p>
-<pre><code>^!+w::
-Send ^c
-run, https://www.google.com/search?tbm=pts&amp;hl=zh-CN&amp;q=%clipboard%
-return
-</code></pre><p>[##淘宝 T]</p>
-<pre><code>^!+t::
-f = %clipboard%
-Send ^c
-run, http://s.taobao.com/search?q=%clipboard%
-clipboard = %f%
-return
-</code></pre><p>[##优酷 Y]</p>
-<pre><code>^!+y::
-f = %clipboard%
-Send ^c
-run, http://www.soku.com/search_video/q_%clipboard%?_rp=14465484703976uZ7za
-clipboard = %f%
-return
-</code></pre><p>[## 百度 B]</p>
-<pre><code>^!+b::
-f = %clipboard%
-Send ^c
-run, http://www.baidu.com/s?wd=%clipboard%&amp;rsv_bp=0&amp;ch=&amp;tn=baidu&amp;bar=&amp;rsv_spt=3&amp;ie=utf-8
-clipboard = %f%
-return
-</code></pre><p>[##购物全套 S]</p>
-<pre><code>^!+s::
-f = %clipboard%
-Send ^c
-run, http://s.taobao.com/search?q=%clipboard%
-run, http://search.jd.com/Search?keyword=%clipboard%&amp;enc=utf-8&amp;wq=%clipboard%&amp;pvid=s0os0gbi.2wf34qb1
-run, http://search.smzdm.com/?c=home&amp;s=%clipboard%
-clipboard = %f%
-return
-</code></pre><p>[##书 X]</p>
-<pre><code>^!+x::
-f = %clipboard%
-Send ^c
-run, https://www.google.com/?gws_rd=ssl#newwindow=1&amp;safe=off&amp;q=%clipboard%`+site:pan.baidu.com
-run, http://202.118.176.18:8080/opac/search_adv_result.php?sType0=any&amp;q0=%clipboard%&amp;with_ebook=on&amp;pageSize=100&amp;sort=score&amp;desc=true
-run, http://book.douban.com/subject_search?cat=1003&amp;search_text=%clipboard%
-clipboard = %f%
-return
-</code></pre><p>[##百度网盘 P]</p>
-<pre><code>^!+p::
-f = %clipboard%
-Send ^c
-run, https://www.google.com/?gws_rd=ssl#newwindow=1&amp;safe=off&amp;q=%clipboard%`+site:pan.baidu.com
-clipboard = %f%
-return
-</code></pre>
+<p><strong>地震怎么办：</strong></p>
+<ol>
+<li>宿舍的树莓派和办公室的电脑同时被毁掉，坐在废墟上的你，陷入深深忧虑。</li>
+<li>只要用网盘作为补充，一个混乱冗余但不丢失任何文件的网盘系统，已经可以足够胜任抚慰你情绪。</li>
+</ol>
+<p>以上的这种策略，就是所谓的「本地全同」加「版本管理」能做到的一种「妥协下的好方案」。</p>
+<h1 id="网盘的选择"><a href="#网盘的选择" class="headerlink" title="网盘的选择"></a>网盘的选择</h1><p>互联网日新月异，本文只在此时点负责结论有限正确（2017-03-29 11:00:52）</p>
+<ol>
+<li><p>微云</p>
+<blockquote>
+<p>只能「全同」，同步策略不佳。</p>
+</blockquote>
+</li>
+<li><p>360企业云</p>
+<blockquote>
+<p>空间小。</p>
+</blockquote>
+</li>
+<li><p>百度云</p>
+<blockquote>
+<p>服务基本满足要求。<br>同步资料要付费。<br>百度是畜生。</p>
+</blockquote>
+</li>
+</ol>
+<p>因此选百度。捏着鼻子为了资料安全，忍着难过使用百度，自己竟被我所感动。</p>
+<h1 id="「本地全同」的选择"><a href="#「本地全同」的选择" class="headerlink" title="「本地全同」的选择"></a>「本地全同」的选择</h1><p><strong>首推 Syncthing ，它的使用效果是：</strong></p>
+<ol>
+<li>我在家用手机修改文档 A 为 A’</li>
+<li>文档被自动备份到永远在线的位于宿舍的树莓派上</li>
+<li>然后手机就可以离线了</li>
+<li>由于树莓派上的 SyncThing 开通了版本控制功能，它不仅保存了 A’ 还保存了A</li>
+<li>打开电脑时，电脑端自动把修改后的 A’ 从树莓派同步回电脑上</li>
+<li>树莓派按照规则自主管理 A 的各种时期的各种版本，使其保证越久远的版本越稀疏，直到超过最大的保存期限（也可设为无限时间）</li>
+<li>这其中并不涉及到任何脆弱的商用的文件管理服务提供者，不担心文件泄密或者像 360 一样服务突然中断</li>
+</ol>
+<p><strong>而购买了一台便携二手 X61 的我更是可以：</strong></p>
+<ol>
+<li>保持 X61 开机，在主电脑上编辑文档，需要离开时，X61 随提随走，资料完全一致。</li>
+<li>在 X61 上编辑的文件，自动同步至主电脑，并在主电脑上留下老版本的备份文件。</li>
+<li>在主电脑上随意的删除、修改，X61 上会自动保留老版本的备份。</li>
+<li>还没完，这些备份的文件以一种十分科学的方式被管理者，你甚至无需过问，这种优秀的策略就是：</li>
+</ol>
+<h1 id="版本管理：一个优秀的策略"><a href="#版本管理：一个优秀的策略" class="headerlink" title="版本管理：一个优秀的策略"></a>版本管理：一个优秀的策略</h1><p>目睹 SyncThing 中阶段版的版本管理说明，愉快的心情让你肌肤仿佛受到无形之手上下抚慰。闭上眼，你在想，这版本管理策略，体贴得简直活生生，它是多么爱你：</p>
+<blockquote>
+<center><img src="http://hyranx.github.io/images/1490756727137.png" alt="image"></center>
+
+
+
+
+</blockquote>
+<p>D&amp;L: <em>2017-03-29 @31#220</em></p>
+
       
     </div>
 
@@ -452,16 +413,16 @@ return
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/13/1_system_imput/" rel="next" title="输入法切换过程造成的麻烦和一种解决途径">
-                <i class="fa fa-chevron-left"></i> 输入法切换过程造成的麻烦和一种解决途径
+              <a href="/2017/01/29/15-chat/" rel="next" title="纯文字聊天常迫使我们面对的">
+                <i class="fa fa-chevron-left"></i> 纯文字聊天常迫使我们面对的
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/13/3_perfect_dng/" rel="prev" title="目前最完美的相片存储格式——DNG">
-                目前最完美的相片存储格式——DNG <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/10/16-R-china-map/" rel="prev" title="使用R绘制中国分省热度图">
+                使用R绘制中国分省热度图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -488,8 +449,8 @@ return
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/12/2_quick_search_using_ahk/"
-           data-title="使用AutoHotKey进行快捷搜索" data-url="http://hyranx.github.io/2016/04/12/2_quick_search_using_ahk/">
+      <div class="ds-thread" data-thread-key="2017/03/29/14-syncthing/"
+           data-title="有关文档同步兼谈版本管理" data-url="http://hyranx.github.io/2017/03/29/14-syncthing/">
       </div>
     
   </div>
@@ -580,7 +541,7 @@ return
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个诉求"><span class="nav-number">1.</span> <span class="nav-text">一个诉求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传统做法"><span class="nav-number">2.</span> <span class="nav-text">传统做法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#而AHK这个上古神器能够做到的"><span class="nav-number">3.</span> <span class="nav-text">而AHK这个上古神器能够做到的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#万万不能滥用剪贴板"><span class="nav-number">4.</span> <span class="nav-text">万万不能滥用剪贴板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不值一提的变化"><span class="nav-number">5.</span> <span class="nav-text">不值一提的变化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小例枚举："><span class="nav-number">6.</span> <span class="nav-text">小例枚举：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么需要「本地全同」-「版本管理」"><span class="nav-number">2.</span> <span class="nav-text">为什么需要「本地全同」+「版本管理」</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网盘的选择"><span class="nav-number">3.</span> <span class="nav-text">网盘的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#「本地全同」的选择"><span class="nav-number">4.</span> <span class="nav-text">「本地全同」的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#版本管理：一个优秀的策略"><span class="nav-number">5.</span> <span class="nav-text">版本管理：一个优秀的策略</span></a></li></ol></div>
             
           </div>
         </section>
